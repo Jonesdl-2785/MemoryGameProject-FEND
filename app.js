@@ -105,11 +105,11 @@ function hideStar(){
 // hideStar();
 // hideStar();
 function startClock() {
-  time = 0;
-  let clockId = setInterval(() => {
+  // time = 0;
+   clockId = setInterval(() => {
     time++;
     displayTime();
-    console.log(time);
+   
     }, 1000);
 }
 
@@ -124,7 +124,7 @@ function displayTime() {
       clock.innerHTML = `${minutes}:${seconds}`;
   }
    console.log(clock);
-   clock.innerHTML = time;
+   // clock.innerHTML = time;
 }
 // displayTime();
 
