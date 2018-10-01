@@ -16,6 +16,9 @@
         </header>
 
         <section class="score-panel">
+            <!-- clock element -->
+            <span class="clock">0:00</span>
+
         	<ul class="stars">
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
@@ -36,7 +39,7 @@
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -45,7 +48,7 @@
             <li class="card">
                 <i class="fa fa-cube"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -80,6 +83,26 @@
             </li>
         </ul>
     </div>
+
+      <div class="modal_bg hide">
+        <div class="modal_body">
+          <div class="modal_hdg">
+            <h1>Your Stats</h1>
+            <span class="modal_close">&times;</span>
+            </div>
+
+            <div class="modal_stats">
+              <span class="modal_time">Time   = </span>
+              <span class="modal_stars">Stars = </span>
+              <span class="modal_moves">Moves =  </span>
+            </div>
+          <div class="modal_btns">
+            <button class="modal_btn modal_cancel">Cancel</button>
+            <button class="modal_btn modal_replay">Replay</button>
+          </div>
+        </div>
+      </div>
+
 
     <script src="js/app.js"></script>
 </body>
