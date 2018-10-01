@@ -121,8 +121,8 @@ function hideStar() {
 function startClock() {
   time = 0;
   let clockId = setInterval(() => {
-      time++;
-     displayTime();
+    time++;
+    displayTime();
   }, 1000);
 }
 // startClock();
@@ -154,21 +154,21 @@ function toggleModal() {
   const modal = document.querySelector('.modal_bg');
   modal.classList.toggle('hide');
 }
- toggleModal(); // to open modal
- toggleModal(); // to close modal
+toggleModal(); // to open modal
+toggleModal(); // to close modal
 
- function getStars() {
-   let stars = document.querySelectorAll('.stars li');
-   let starCount = 0;
-   for (star of stars) {
-     if (star.style.display !== 'none') {
-         starCount++;
-     }
-   }
-   return starCount;
- }
- // writeModalStats();
- // toggleModal();
+function getStars() {
+  let stars = document.querySelectorAll('.stars li');
+  let starCount = 0;
+  for (star of stars) {
+    if (star.style.display !== 'none') {
+      starCount++;
+    }
+  }
+  return starCount;
+}
+// writeModalStats();
+// toggleModal();
 
 
 function writeModalStats() {
@@ -228,23 +228,24 @@ function resetStars() {
 }
 
 function replayGame() {
-    toggleModal();
-    resetGame();
+  toggleModal();
+  resetGame();
 }
 
 function gameOver() {
-    toggleModal();
-    stopClock();
-    writeModalStats();
-    resetAllMatched()
+  toggleModal();
+  stopClock();
+  writeModalStats();
+  resetAllMatched()
 }
 
 function resetCards() {
   const cards = document.querySelectorAll('.deck li');
-      for (let card of cards) {
-          card.className = 'card';
-      }
-    }
+  for (let card of cards) {
+    card.className = 'card';
+  }
+}
+
 function resetAllMatched() {
   matched = 0;
 }
@@ -256,21 +257,21 @@ function resetAllMatched() {
  *   - add each card's HTML to the page
  */
 
- // Shuffle function from http://stackoverflow.com/a/2450976
- function shuffle(array) {
-   var currentIndex = array.length,
-     temporaryValue, randomIndex;
+// Shuffle function from http://stackoverflow.com/a/2450976
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue, randomIndex;
 
-   while (currentIndex !== 0) {
-     randomIndex = Math.floor(Math.random() * currentIndex);
-     currentIndex -= 1;
-     temporaryValue = array[currentIndex];
-     array[currentIndex] = array[randomIndex];
-     array[randomIndex] = temporaryValue;
-   }
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
 
-   return array;
- }
+  return array;
+}
 
 
 /*
